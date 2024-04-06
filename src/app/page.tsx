@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { JSX, SVGProps } from "react"
 import landing from "../../assests/placeholder.jpg";
 import Image from "next/image";
+import { Web3Modal } from "@/connection";
 
 export default function Component() {
   return (
@@ -28,9 +29,11 @@ export default function Component() {
                   Watch anywhere. Cancel anytime. All for one low monthly price.
                 </p>
               </div>
-              <Button className="mx-auto" size="lg">
+              <w3m-button/>
+              
+              {/* <Button className="mx-auto" size="lg">
                 Connect Wallet
-              </Button>
+              </Button> */}
             </div>
           </div>
         </section>
