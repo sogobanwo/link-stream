@@ -2,6 +2,8 @@ import Link from "next/link"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { JSX, SVGProps } from "react"
+import landing from "../../assests/placeholder.jpg";
+import Image from "next/image";
 
 export default function Component() {
   return (
@@ -27,35 +29,32 @@ export default function Component() {
         </nav>
       </header>
       <main className="flex-1">
-        <section className="w-full h-[calc(100vh_-_header)]">
+        <section className="w-full h-[calc(100vh-56px)]">
           <div className="relative w-full aspect-video overflow-hidden">
-            <img
+            <Image
               alt="Hero"
-              className="object-cover object-center"
-              height="1080"
-              src="/placeholder.svg"
+              className="object-cover object-center h-[calc(100vh-56px)]"
+              src={landing}
               style={{
                 aspectRatio: "1920/1080",
                 objectFit: "cover",
               }}
               width="1920"
             />
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 px-4 text-center md:px-6">
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-8 px-4 text-center md:px-6">
               <div className="space-y-2">
                 <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">Unlimited Entertainment</h1>
                 <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                   Watch anywhere. Cancel anytime. All for one low monthly price.
                 </p>
               </div>
-              <form className="flex flex-col gap-2 max-w-sm">
-                <Input className="mx-auto" placeholder="Email address" type="email" />
-                <Button className="mx-auto" size="lg">
-                  Get Started
-                </Button>
-              </form>
+              <Button className="mx-auto" size="lg">
+                Connect Wallet
+              </Button>
             </div>
           </div>
         </section>
+
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-10">
@@ -66,11 +65,11 @@ export default function Component() {
                 </p>
               </div>
               <div className="grid items-center gap-4 sm:gap-6">
-                <img
+                <Image
                   alt="Image"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center"
                   height="310"
-                  src="/placeholder.svg"
+                  src={landing}
                   width="550"
                 />
               </div>
@@ -81,11 +80,11 @@ export default function Component() {
           <div className="container px-4 md:px-6">
             <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-10">
               <div className="grid items-center gap-4 sm:gap-6 lg:order-2">
-                <img
+                <Image
                   alt="Image"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center"
                   height="310"
-                  src="/placeholder.svg"
+                  src={landing}
                   width="550"
                 />
               </div>
@@ -111,11 +110,11 @@ export default function Component() {
                 </p>
               </div>
               <div className="grid items-center gap-4 sm:gap-6">
-                <img
+                <Image
                   alt="Image"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center"
                   height="310"
-                  src="/placeholder.svg"
+                  src={landing}
                   width="550"
                 />
               </div>
