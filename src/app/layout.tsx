@@ -20,7 +20,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {" "}
         <Web3Modal>
         <div className="flex flex-col min-h-[100dvh]">
           <header className="px-4 lg:px-6 h-14 flex items-center">
