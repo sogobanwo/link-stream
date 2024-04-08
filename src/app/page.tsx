@@ -182,16 +182,16 @@ export default function Component() {
       </section>
 
       <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
-        <div className="flex flex-col items-center gap-8 text-[#141516]">
+        <div className="flex flex-col items-center gap-10 text-[#141516]">
           <h1 className="text-3xl text-center font-bold tracking-tighter sm:text-4xl md:text-5xl mb-2">
-            Start your own business today
+            Check out ongoing events
           </h1>
           <p className="max-w-[600px] md:text-xl/relaxed lg:text-base/relaxed xl:text-x/relaxed ">
             You take care of the video quality and we take care of everything
             else
           </p>
           
-        <div className="flex flex-wrap container gap-8 max-w-[900px] mx-auto">
+        <div className="flex flex-wrap  gap-6">
         <EventCard/>
         <EventCard/>
         <EventCard/>
