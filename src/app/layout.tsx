@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { Inter, Montserrat } from "next/font/google";
 import { Web3Modal } from "@/connection";
-import { MountainIcon } from "lucide-react";
-import Link from "next/link";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,48 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Web3Modal>
-        <div className="flex flex-col min-h-[100dvh]">
-          <header className="px-4 lg:px-6 h-14 flex items-center">
-            <Link className="flex items-center justify-center" href="#">
-              <MountainIcon className="h-6 w-6" />
-              <span className="sr-only">Acme Inc</span>
-            </Link>
-            <nav className="ml-auto mr-5 flex gap-4 sm:gap-6">
-              <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-                Features
-              </Link>
-              <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-                Pricing
-              </Link>
-              <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-                About
-              </Link>
-              <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-                Contact
-              </Link>
-            </nav>
-            <w3m-button/>
-          </header>
-
-          {children}
-
-          <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-            <p className="text-xs text-gray-500 dark:text-gray-400">© 2024 Acme Inc. All rights reserved.</p>
-            <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-              <Link className="text-xs hover:underline underline-offset-4" href="#">
-                Terms of Service
-              </Link>
-              <Link className="text-xs hover:underline underline-offset-4" href="#">
-                Privacy
-              </Link>
-            </nav>
-          </footer>
-        </div>
-        </Web3Modal>
+      <body className={montserrat.className}>
+        <Web3Modal>{children}</Web3Modal>
       </body>
     </html>
   );
 }
-
