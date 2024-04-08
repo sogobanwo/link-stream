@@ -1,9 +1,12 @@
 "use client";
 
 import { createWeb3Modal, defaultConfig } from "@web3modal/ethers/react";
+import { Inter, Montserrat } from "next/font/google";
 
 export const BASE_SEPOLIA_ID = 84532;
 export const OPTIMISM_SEPOLIA_ID = 11155420;
+const montserrat = Montserrat({ subsets: ["latin"] });
+
 
 const baseSepolia = {
   chainId: BASE_SEPOLIA_ID,
@@ -38,6 +41,12 @@ createWeb3Modal({
   chains: [baseSepolia, optimismSepolia],
   projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
   enableAnalytics: false, // Optional - defaults
+  themeVariables: {
+    '--w3m-accent': '#006AFF',
+    '--w3m-border-radius-master': '',
+    '--w3m-font-size-master': '16',
+    '--w3m-font-family': `${montserrat}`
+  }
 });
 
 export function Web3Modal({ children }) {

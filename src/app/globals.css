@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.wui-connect-button{
+    font-size: 14px !important;
+    color: red !important;
+}
