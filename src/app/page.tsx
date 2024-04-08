@@ -9,6 +9,7 @@ import landingImg4 from "../../assests/landingpage/landingImg4.png";
 import Image from "next/image";
 import { Web3Modal } from "@/connection";
 import { NavBar } from "@/components/shared/Navbar";
+import { EventCard } from "@/components/events/EventCard";
 
 export default function Component() {
   return (
@@ -180,8 +181,8 @@ export default function Component() {
         </div>
       </section>
 
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-[#141516]">
-        <div className="flex flex-col items-center gap-8 text-white">
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
+        <div className="flex flex-col items-center gap-8 text-[#141516]">
           <h1 className="text-3xl text-center font-bold tracking-tighter sm:text-4xl md:text-5xl mb-2">
             Start your own business today
           </h1>
@@ -189,21 +190,13 @@ export default function Component() {
             You take care of the video quality and we take care of everything
             else
           </p>
-          <div className="flex flex-row gap-6">
-            <Button className="rounded-full px-12 py-6 border border-[#006AFF] bg-[#006AFF]">
-              Get started
-            </Button>
-
-            <Button className="rounded-full px-12 py-6 border border-[#141516] bg-white text-[#141516] hover:text-white">
-              Connect wallet
-            </Button>
-          </div>
-          <Image
-            alt="Image"
-            className="mx-auto rounded-xl object-cover object-center mt-4"
-            src={landingImg4}
-            // width="550"
-          />
+          
+        <div className="flex flex-wrap container gap-8 max-w-[900px] mx-auto">
+        <EventCard/>
+        <EventCard/>
+        <EventCard/>
+        <EventCard/>
+        </div>
           {/* <div className="container px-4 md:px-6">
             <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-10">
               <div className="grid items-center gap-4 sm:gap-6 order-2">
