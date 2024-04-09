@@ -47,7 +47,7 @@ export default function Component() {
 
               <div className="flex flex-row gap-6">
                 <Button className="rounded-full px-12 py-6 border border-[#006AFF] bg-[#006AFF]">
-                  Get started
+                  Explore
                 </Button>
 
                 <Button className="rounded-full px-12 py-6 border border-[#006AFF] bg-[#141516]">
