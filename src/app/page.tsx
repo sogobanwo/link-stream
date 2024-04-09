@@ -214,6 +214,32 @@ export default function Component() {
           </div>
         </div>
       </section>
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-[#141516]">
+        <div className="flex flex-col items-center gap-8 text-white">
+          <h1 className="text-3xl text-center font-bold tracking-tighter sm:text-4xl md:text-5xl mb-2">
+            Start streaming your events today
+          </h1>
+          <p className="max-w-[600px] md:text-xl/relaxed lg:text-base/relaxed xl:text-x/relaxed ">
+            You take care of the video quality and we take care of everything
+            else
+          </p>
+          <div className="flex flex-row gap-6">
+            <Button className="rounded-full px-12 py-6 border border-[#006AFF] bg-[#006AFF]">
+              Get started
+            </Button>
+
+            <Button className="rounded-full px-12 py-6 border border-[#141516] bg-white text-[#141516] hover:text-white">
+              Connect wallet
+            </Button>
+          </div>
+          <Image
+            alt="Image"
+            className="mx-auto rounded-xl object-cover object-center mt-4"
+            src={landingImg4}
+            // width="550"
+          />
+        </div>
+      </section>
       <Footer />
     </main>
   );
