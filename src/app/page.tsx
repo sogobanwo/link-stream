@@ -18,8 +18,14 @@ import {
   Video,
 } from "lucide-react";
 import { Footer } from "@/components/shared/Footer";
+import { events } from "@/DummyData/data";
+import { Event } from "../DummyData/data";
+
 
 export default function Component() {
+
+  const lastThreeEvents = events.slice(-3);
+
   return (
     <main className="flex-1">
       <NavBar />
@@ -32,7 +38,7 @@ export default function Component() {
                 alt="Image"
                 className="mx-auto rounded-xl object-cover object-center"
                 src={hero}
-                // width="550"
+              // width="550"
               />
             </div>
             <div className="space-y-4 text-white">
@@ -46,9 +52,11 @@ export default function Component() {
               </p>
 
               <div className="flex flex-row gap-6">
-                <Button className="rounded-full px-12 py-6 border border-[#006AFF] bg-[#006AFF]">
-                  Explore
-                </Button>
+                <Link href={"/events"}>
+                  <Button className="rounded-full px-12 py-6 border border-[#006AFF] bg-[#006AFF]">
+                    Explore
+                  </Button>
+                </Link>
 
                 <Button className="rounded-full px-12 py-6 border border-[#006AFF] bg-[#141516]">
                   Connect wallet
@@ -141,7 +149,7 @@ export default function Component() {
                 alt="Image"
                 className="mx-auto rounded-xl object-cover object-center"
                 src={landingImg2}
-                // width="550"
+              // width="550"
               />
             </div>
             <div className="space-y-4 text-white">
@@ -165,7 +173,7 @@ export default function Component() {
                 alt="Image"
                 className="mx-auto rounded-xl object-cover object-center"
                 src={landingImg3}
-                // width="550"
+              // width="550"
               />
             </div>
             <div className="space-y-4 text-white">
@@ -192,15 +200,16 @@ export default function Component() {
           <div>
             <div className="flex justify-between mb-4">
               <p className="text-2xl font-semibold">Popular Events</p>
-              <p className="font-medium text-[#006AFF] flex cursor-pointer">
+              <Link className="font-medium text-[#006AFF] flex cursor-pointer" href={"/events"}>
                 See more <ArrowRight className="ml-2" />
-              </p>
+              </Link>
             </div>
-            <div className="flex flex-wrap  gap-6">
-              <EventCard />
-              <EventCard />
-              <EventCard />
-              <EventCard />
+            <div className="flex flex-wrap gap-6">
+
+              {lastThreeEvents.map((event: Event, index: number) =>
+              (
+                <EventCard event={event} key={index} />
+              ))}
             </div>
           </div>
         </div>
