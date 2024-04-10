@@ -8,8 +8,6 @@ import {
     BreadcrumbPage,
     BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
-import banner from "../../../assests/events/banner.jpg"
-
 
 interface InnerBannerProps {
     caption: string;
@@ -21,24 +19,24 @@ const EachEventInnerBanner: React.FC<InnerBannerProps> = ({ caption, pageTitle, 
     return (
         <div className="relative bg-center">
             <div className="">
-                <Image src={banner} alt="Banner" />
+                <Image src={idImage} alt="Banner" className="w-full max-h-[45vh]"/>
             </div>
             <div className="bg-white opacity-25" />
             <div className="container mt-28 z-10 absolute inset-0">
                 <div className="py-16 text-center flex flex-col items-center justify-center">
-                    <h2 className="text-4xl font-bold mb-8">{caption}</h2>
+                    <h2 className="text-4xl font-bold mb-8 text-white">{caption}</h2>
                     <Breadcrumb>
                         <BreadcrumbList>
                             <BreadcrumbItem>
-                                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+                                <BreadcrumbLink href="/" className="text-white text-xl">Home</BreadcrumbLink>
                             </BreadcrumbItem>
                             <BreadcrumbSeparator />
                             <BreadcrumbItem>
-                                <BreadcrumbLink href="/events">events</BreadcrumbLink>
+                                <BreadcrumbLink href="/events" className="text-white text-xl">events</BreadcrumbLink>
                             </BreadcrumbItem>
                             <BreadcrumbSeparator />
                             <BreadcrumbItem>
-                                <BreadcrumbPage>{pageTitle}</BreadcrumbPage>
+                                <BreadcrumbPage className="text-xl">{pageTitle}</BreadcrumbPage>
                             </BreadcrumbItem>
                         </BreadcrumbList>
                     </Breadcrumb>
